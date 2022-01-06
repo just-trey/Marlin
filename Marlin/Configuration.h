@@ -78,7 +78,7 @@
  * managing multiple configurations or override values specified in other files.
  */
 
-//#define IS_BOARD_1_2  // Enable if you have the 1.2 board, disable for 1.3 board
+#define IS_BOARD_1_3            true // True if you have the 1.3 board, false for 1.2 board
 #define HAS_BLTOUCH   // Enable if you want to use BLTOUCH
 // Define missing pins
 #define POWER_LOSS_PIN          PA2
@@ -147,10 +147,10 @@
 // For ZNP Robin Nano 1.2 - set default_envs = mks_robin_nano35
 // For ZNP Robin Nano 1.3 - default_envs = mks_robin_nano_v1_3_f4
 #ifndef MOTHERBOARD
-  #if ENABLED(IS_BOARD_1_2)
-    #define MOTHERBOARD BOARD_MKS_ROBIN_NANO
-  #else
+  #if (IS_BOARD_1_3)
     #define MOTHERBOARD BOARD_MKS_ROBIN_NANO_V1_3_F4
+  #else
+    #define MOTHERBOARD BOARD_MKS_ROBIN_NANO
   #endif
 #endif
 
