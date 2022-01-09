@@ -30,13 +30,12 @@ All versions provided come with these features.
 1. An alternative UI
    - Not as "pretty," but much more helpful
    - Update many configuration values (including ESTEPS) right on the screen
-   - PID Autotuning for the nozzle AND bed from the UI.  
+   - PID Autotuning for the nozzle AND bed from the UI. 
 1. [S-Curve Acceleration](https://github.com/synthetos/TinyG/wiki/Jerk-Controlled-Motion-Explained)
 1. Adaptive Step Smoothing
 1. ARC Support Enabled
 1. **M117** Change filament at layer.
-1. Touchscreen will turn off after 2 min on the staus screen (tap it to turn it back on)
-1. The progress screen will update if you are printing from Octoprint.
+2. The screen will update if you are printing from Octoprint.
 
 BLTouch versions also include:
 1. Z Level Offset Wizard
@@ -48,17 +47,18 @@ BLTouch versions also include:
 The following items are not supported:
 
 1. If you have a WIFI Card, it WILL NOT WORK (MKS made that call, not me) 
-1. Icon previews do not exist in UI
+2. Power loss detection does not work. Same reason as above. 
+3. Icon previews do not exist in UI
 
 # Setup and install
 
 ## Getting things ready
 
-NOTE: I recommend you use a sd card 8gb or less for installing. Using anything larger has been an issue with some users. [If you do not have one this is the one I use (non-affiliate link)](https://amzn.to/3JIOzYL)
+NOTE: I recommend you use an sd card 8gb or less FAT Formatted for installing. Using anything larger has been an issue with some users. [If you do not have one this is the one I use (non-affiliate link)](https://amzn.to/3JIOzYL)
 
 1. [Download the latest version here](https://github.com/just-trey/Marlin/releases/latest/download/Elegoo.zip).
 2. Extract the zip file on your computer
-3. Copy the desired `elegoo.bin` configuration to your SD Card. No other files are needed to install.  
+3. Copy the desired `elegoo.bin` configuration to your SD Card. No other files are needed to install. 
    
    ***NOTE:*** **IT IS IMPORTANT YOU KNOW THE VERSION OF THE ZNP ROBIN NANO BOARD YOU HAVE, AND YOU NEED TO USE THAT VERSION OF THE FIRMWARE**
   
@@ -69,26 +69,18 @@ NOTE: I recommend you use a sd card 8gb or less for installing. Using anything l
    - All firmware and configurations for 1.3 boards are in the 1.3 directory
    - If you *DO NOT* have a BLOTUCH, use the file in the STOCK directory
    - If you *DO* have a BLOTUCH, use the file in the BLOTUCH directory
-
+   - Neptune 2d version are avaiable with STOCK and BLOTUCH support following the same structre
 ## Install
-
-NOTE: the last four steps may seem a little odd, but I can confirm this is working reliably. I will be opening an ISSUE on the Marlin GitHub repo to see if there is a better way. 
 
 1. Power off your printer
 2. Put the sd card in with the appropriate `elegoo.bin` file... *Reminder: Did I mention to make sure you have the correct version for your board?*
 3. Turn on your printer.
 4. The firmware will install.
-5. if a screen appears asking to set the EEPROM, click the checkmark.
-6. Once installed, click on the calibration touchpoints. When the touch calibration is complete, it will display a confirmation message. You may think it froze but give it a little time.
+5. Once installed, click on the calibration touchpoints. When the touch calibration is complete, it will display a confirmation message. You may think it froze but give it a little time.
 
    Please note: After you click the bottom right calibration point, reboot your machine if it prompts you to click the top left again. I have never had to do this more than twice when installing the firmware. This may be a unique issue because I have had it since I bought this printer.
 
-7. If you reset your EEPROM on Step 5, you are good to go. If not, proceed to step 8. 
-8. Click *SETTINGS ICON -> Configuration -> Advanced Settings -> NEXT ARROW (>) -> Initialize EEPROM*
-9. Click the Check on the confirmation screen
-10. reboot your machine
-11. Click the calibration touchpoints again if they come up
-12. Remove the SD Card from your machine
+6.  Remove the SD Card from your machine
   
 ## (Optional, but recommended) PID AUTOTUNE your machine.
 
@@ -106,14 +98,15 @@ NOTE: the last four steps may seem a little odd, but I can confirm this is worki
 
 Located at: *settings icon -> Configuration -> Advanced Settings -> NEXT ARROW (>) -> Tempeture -> NEXT ARROW (>) -> Probe Offsets*
 
+### BT Touch Probe offsets
+
+You can modify the offset of you probe within the touch screen interface to center your nozzle. 
+For example: If you happen to use [this dual fan printhead](https://www.thingiverse.com/thing:4949488), the X offset is 47.5
+You can set this at: *settings icon -> Configuration -> Advanced Settings -> Probe Offsets*
+
 ### Live Z Offset (Baby Stepping) Location
 
 While printing:  *settings icon -> Tune -> NEXT ARROW (>) -> Probe Z Offset*
-
-### Dual Fan BT Touch Probe offsets
-
-If you happen to use [this dual fan printhead](https://www.thingiverse.com/thing:4949488), the X offset is 47.5
-You can set this at: *settings icon -> Configuration -> Advanced Settings -> Probe Offsets*
 
 # FAQ's
 
@@ -123,7 +116,7 @@ A. Marlin 2 does not use any additional files for the provided configurations. I
 
 Q. The touch screen does not seem very responsive. Especially at the bottom of the screen. What's up with that?
 
-A. Yup. The color depth is also horrendous! So I choose very bright colors for the theme. If you know of a better quality compatible screen, I'd love to hear about it. I think a corner was cut on the machine to help keep costs down, which is very fair! 
+A. Yup. The color depth is also horrendous! So I choose very bright colors for the theme. If you know of a better quality compatible screen, I'd love to hear about it. I think a corner was cut on the machine to help keep costs down, which is very fair! A manual workaround is to use a stylus! I found one that works well and made a slide holder for it. 
 
 Q: How do I know what version board I have?
 A: There are two ways to identify what version board you have. 
