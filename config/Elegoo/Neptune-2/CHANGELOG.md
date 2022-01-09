@@ -62,7 +62,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Enabled [S-Curve Acceleration](https://github.com/synthetos/TinyG/wiki/Jerk-Controlled-Motion-Explained)
 - Enabled Adaptive Step Smoothing
 - Enabled ARC Support Enabled
-- Enabled **M117** Change filament at layer.
+- Enabled **M600** Change filament at layer.
 
 **BLTouch COnfigurations**
 - Enabled Z Level Offset Wizard
