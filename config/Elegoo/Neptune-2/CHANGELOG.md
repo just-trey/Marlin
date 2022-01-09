@@ -21,8 +21,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Update and linked issue in TESTING_STATUS.md and fixed typo in `README.MD`
-- Moved FAQ's to main readme.md and added how to find the board version
+- Update and linked issue in `TESTING_STATUS.md` and fixed typo in `README.MD`
+- Moved FAQ's to main `README.MD` and added how to find the board version
 - Disabled TOUCH_IDLE_SLEEP due to screen still reacting to touches when clicked to wake
 - Simplified down to one config with multiple switches.
 - Reduced probing margin
@@ -69,6 +69,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Enabled **Live Z** Support
 - Enabled Bed tramming wizard option (I mean, you still need to level every once and a while)
 
-[Unreleased]: https://github.com/just-trey/Marlin/compare/2.0.9.3-N2-beta1...elegoo-neptune-2
-[2.0.9.3-N2-$1-beta21
-[Marlin-2.0.9.3-elegoo]: https://github.com/just-trey/Marlin/releases/tag/Marlin-2.0.9.3-elegoo
+Unreleased: https://github.com/just-trey/Marlin/compare/2.0.9.3-N2-rc1...elegoo-neptune-2
+
+2.0.9.3-N2-$1-RC1: https://github.com/just-trey/Marlin/compare/Marlin-2.0.9.3-elegoo...2.0.9.3-N2-rc1
+
+2.0.9.3-N2-$1-beta1: https://github.com/just-trey/Marlin/compare/Marlin-2.0.9.3-elegoo...2.0.9.3-N2-beta1
+
+Marlin-2.0.9.3-elegoo: https://github.com/just-trey/Marlin/releases/tag/Marlin-2.0.9.3-elegoo
