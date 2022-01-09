@@ -78,9 +78,11 @@
  * managing multiple configurations or override values specified in other files.
  */
 
+// MAIN CONFIGURATION SWITCHES FOR FEATURES - see readme.md for more details.
+
 #define IS_BOARD_1_3            true  // True if you have the 1.3 board, false for 1.2 board
 #define IS_2D                   false // True if you have a Neptuen 2d (Dual extruder)
-#define HAS_BLTOUCH             false  // Enable if you have a BlTouch, false fo no BlTouch
+#define HAS_BLTOUCH             true  // Enable if you have a BlTouch, false fo no BlTouch
 // Define missing pins
 #define POWER_LOSS_PIN          PA2
 #define MT_DET_PIN_STATE        LOW
@@ -254,6 +256,7 @@
 // :[0, 1, 2, 3, 4, 5, 6, 7, 8]
 #if IS_2D
   #define EXTRUDERS 2
+  #define SINGLENOZZLE
 #else
   #define EXTRUDERS 1
 #endif
@@ -556,11 +559,7 @@
  *
  */
 #define TEMP_SENSOR_0 1
-#if IS_2D
-  #define TEMP_SENSOR_1 1
-#else
-  #define TEMP_SENSOR_1 0
-#endif
+#define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
 #define TEMP_SENSOR_4 0
@@ -673,7 +672,7 @@
     #define DEFAULT_Ki_LIST {   1.08,   1.08 }
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
-    // tuned for my Elegoo Neptune 2, but you should tune on you own machine once you haev it setup
+    // tuned for my Elegoo Neptune 2, but you should tune on you own machine once you have it setup
     #define DEFAULT_Kp  25.47
     #define DEFAULT_Ki   2.11
     #define DEFAULT_Kd  76.90
@@ -1980,13 +1979,13 @@
 // Preheat Constants - Up to 5 are supported without changes
 //
 #define PREHEAT_1_LABEL       "PLA"
-#define PREHEAT_1_TEMP_HOTEND 180
+#define PREHEAT_1_TEMP_HOTEND  200
 #define PREHEAT_1_TEMP_BED     50
 #define PREHEAT_1_TEMP_CHAMBER 35
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "PETG"
-#define PREHEAT_2_TEMP_HOTEND 230
+#define PREHEAT_2_TEMP_HOTEND  230
 #define PREHEAT_2_TEMP_BED     75
 #define PREHEAT_2_TEMP_CHAMBER 35
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
@@ -2070,7 +2069,6 @@
   // Dual hotend system may use { {  -20, (Y_BED_SIZE / 2), (Z_MIN_POS + 1) },  {  420, (Y_BED_SIZE / 2), (Z_MIN_POS + 1) }}
   #define NOZZLE_CLEAN_START_POINT { {  30, 30, (Z_MIN_POS + 1) } }
   #define NOZZLE_CLEAN_END_POINT   { { 100, 60, (Z_MIN_POS + 1) } }
-
   // Circular pattern radius
   #define NOZZLE_CLEAN_CIRCLE_RADIUS 6.5
   // Circular pattern circle fragments number
@@ -2232,7 +2230,7 @@
  *
  * Use CRC checks and retries on the SD communication.
  */
-//#define SD_CHECK_AND_RETRY
+#define SD_CHECK_AND_RETRY
 
 /**
  * LCD Menu Items
