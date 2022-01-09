@@ -34,7 +34,7 @@ All versions provided come with these features.
 1. [S-Curve Acceleration](https://github.com/synthetos/TinyG/wiki/Jerk-Controlled-Motion-Explained)
 1. Adaptive Step Smoothing
 1. ARC Support Enabled
-1. **M117** Change filament at layer.
+1. **M600** Change filament at layer.
 2. The screen will update if you are printing from Octoprint.
 
 BLTouch versions also include:
@@ -62,9 +62,10 @@ NOTE: I recommend you use an sd card 8gb or less FAT Formatted for installing. U
    
    ***NOTE:*** **IT IS IMPORTANT YOU KNOW THE VERSION OF THE ZNP ROBIN NANO BOARD YOU HAVE, AND YOU NEED TO USE THAT VERSION OF THE FIRMWARE**
   
-   - The directory structure is as follows:
+   - The directory structure is as follows: 
+     
+     ![dir structure](https://user-images.githubusercontent.com/10281380/148702987-9dd38cbb-fac2-4b16-aa44-5f9b72192f2a.jpg)
 
-     ![Screenshot from 2022-01-02 01-15-06](https://user-images.githubusercontent.com/10281380/147867833-04257d55-69a0-4653-8c9d-c61f433bf567.png)  
    - All firmware and configurations for 1.2 boards are in the 1.2 directory
    - All firmware and configurations for 1.3 boards are in the 1.3 directory
    - If you *DO NOT* have a BLOTUCH, use the file in the STOCK directory
