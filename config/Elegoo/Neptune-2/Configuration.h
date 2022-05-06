@@ -1,6 +1,6 @@
 /**
  * Marlin 3D Printer Firmware
-no * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
+ * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
  *
  * Based on Sprinter and grbl.
  * Copyright (c) 2011 Camiel Gubbels / Erik van der Zalm
@@ -80,8 +80,8 @@ no * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin
 
 // MAIN CONFIGURATION SWITCHES FOR FEATURES - see readme.md for more details.
 
-#define IS_BOARD_1_3            false  // true if you have the 1.3 board, false for 1.2 board
-#define HAS_BLTOUCH             false  // true if you have a BlTouch or clone
+#define IS_BOARD_1_3            true  // true if you have the 1.3 board, false for 1.2 board
+#define HAS_BLTOUCH             true  // true if you have a BlTouch or clone
 #define IS_2D                   false // true if you have a Neptuen 2d (Dual extruder)
 
 // Define missing pins
@@ -122,7 +122,7 @@ no * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin
 // For ZNP Robin Nano 1.3 - default_envs = mks_robin_nano_v1_3_f4
 #ifndef MOTHERBOARD
   #if (IS_BOARD_1_3)
-    #define MOTHERBOARD BOARD_mks_robin_nano35
+    #define MOTHERBOARD BOARD_MKS_ROBIN_NANO_V1_3_F4
   #else
     #define MOTHERBOARD BOARD_MKS_ROBIN_NANO
   #endif
